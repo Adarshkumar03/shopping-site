@@ -8,9 +8,13 @@ const Shop = () => {
     <div>
       <Cart />
       <Header />
-      <Card img="#" name="Some name" price="2.0" />
-      <Card img="#" name="Some name" price="2.0" />
-      <Card img="#" name="Some name" price="2.0" /> 
+      <h2>Inventory</h2>
+      <Card img="#" name="Some name" price="3"/>
+      <Card img="#" name="Some name" price="4"/>
+      <Card img="#" name="Some name" price="1"/>
+      <Card img="#" name="Some name" price="6"/>
+      <Card img="#" name="Some name" price="2"/>
+      <Card img="#" name="Some name" price="10"/>
       <Footer />
     </div>
   );
