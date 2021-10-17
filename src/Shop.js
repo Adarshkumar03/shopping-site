@@ -1,7 +1,19 @@
+import Header from "./Header";
+import Footer from "./Footer";
+import Cart from "./Cart";
+import Card from "./Card";
+
 const Shop = () => {
-    return (<div>
-        <h3>This is Shop component</h3>
-    </div>)
-}
+  return (
+    <div>
+      <Cart />
+      <Header />
+      <Card img="#" name="Some name" price="2.0" />
+      <Card img="#" name="Some name" price="2.0" />
+      <Card img="#" name="Some name" price="2.0" /> 
+      <Footer />
+    </div>
+  );
+};
 
 export default Shop;
