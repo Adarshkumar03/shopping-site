@@ -1,8 +1,11 @@
-const Card = () => {
-    return <div>
-        <img/>
-        <h3></h3>
+const Card = ({ img, name, price }) => {
+  return (
+    <div>
+      <img src={img} alt={name} />
+      <h3>{name}</h3>
+      <p>${price}</p>
     </div>
-}
+  );
+};
 
 export default Card;
