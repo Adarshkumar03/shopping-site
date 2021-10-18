@@ -1,9 +1,14 @@
-const Card = ({ img, name, price }) => {
+const Card = ({ img, name, price, isButton }) => {
   return (
     <div>
       <img src={img} alt={name} />
       <h3>{name}</h3>
-      <p>${price}</p>
+      {
+        price&&<p>${price}</p>
+      }
+      {
+        isButton&&<button>Add to Cart</button>
+      }
     </div>
   );
 };

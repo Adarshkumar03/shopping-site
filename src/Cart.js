@@ -1,5 +1,8 @@
 const Cart = () => {
-    return <h3>Cart</h3>;
+    return <div>
+        <p>(1 item) $2.0 </p>
+        <button>Basket</button>
+    </div>;
 }
 
 export default Cart;
