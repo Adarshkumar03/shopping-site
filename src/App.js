@@ -3,7 +3,7 @@ import Footer from "./Footer";
 import Features from "./Features";
 import Comments from "./Comments";
 
-function App() {
+function App({inventory, cart, total}) {
   return (
     <div className="App">
       <Header />

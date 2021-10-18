@@ -2,18 +2,18 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Card from "./Card";
 
-const Shop = () => {
+const Shop = ({inventory, cart, total}) => {
   let isButton = true;
+  
   return (
     <div>
       <Header />
       <h2>Inventory</h2>
-      <Card img="#" name="Some name" price="3" isButton={isButton}/>
-      <Card img="#" name="Some name" price="4" isButton={isButton}/>
-      <Card img="#" name="Some name" price="1" isButton={isButton}/>
-      <Card img="#" name="Some name" price="6" isButton={isButton}/>
-      <Card img="#" name="Some name" price="2" isButton={isButton}/>
-      <Card img="#" name="Some name" price="10" isButton={isButton}/>
+       {
+         inventory.map((item,index)=>{
+             return <Card name={item.name} price={item.price} isButton={isButton}/>
+         })
+       }
       <Footer />
     </div>
   );
