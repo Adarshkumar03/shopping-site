@@ -1,10 +1,10 @@
 const Comments = () => {
   return (
-    <div>
+    <section>
       <Comment author="Guy" comment="Just wow." />
       <Comment author="Guy" comment="Just wow." />
       <Comment author="Guy" comment="Just wow." />
-    </div>
+    </section>
   );
 };
 

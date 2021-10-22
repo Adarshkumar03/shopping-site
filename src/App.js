@@ -3,10 +3,10 @@ import Footer from "./Footer";
 import Features from "./Features";
 import Comments from "./Comments";
 
-function App({inventory, cart, total}) {
+function App({cart}) {
   return (
     <div className="App">
-      <Header />
+      <Header cart={cart}/>
       <Features />
       <Comments />
       <Footer />

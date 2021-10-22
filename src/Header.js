@@ -1,9 +1,9 @@
 import Cart from "./Cart";
 import {Link} from "react-router-dom";
 
-const Header = () => {
-    return (<div>
-        <Cart/>
+const Header = ({cart}) => {
+    return (<header>
+        <Cart cart={cart}/>
         <h3>Shopinist</h3>
         <nav>
             <ul>
@@ -15,7 +15,7 @@ const Header = () => {
                 </li>
             </ul>
         </nav>
-    </div>)
+    </header>)
 }
 
 export default Header;
