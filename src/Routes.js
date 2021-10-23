@@ -60,18 +60,38 @@ const Routes = () => {
         number:1
       }];
       const [cart, setCart] = useState([]);
-      const [total, setTotal] = useState(0);
+
+      const addItemToCart = (item) => {
+        let index = cart.findIndex(cartItem=>cartItem.id===item.id);
+        if(index>-1){
+        let newCart = cart.slice();
+        newCart[index].number++;
+        setCart([...newCart]);
+        }
+        else{
+          setCart([...cart, item]);
+        }
+      }
+
+      const removeItemFromCart = (item) => {
+        let index = cart.findIndex(cartItem=>cartItem.id===item.id);
+        if(index>-1){
+            let newCart = cart.slice();
+            if(newCart[index].number===1){
+              newCart.splice(index,1);
+            }else{
+              newCart[index].number--;
+            }
+            setCart([...newCart]);
+        }
+      }
+      
     return (
         <BrowserRouter>
             <Switch>
-                <Route exact path="/" component={()=><App cart={cart} total={total}/>}/>
+                <Route exact path="/" component={()=><App cart={cart} onAdd={addItemToCart} onRemove={removeItemFromCart}/>}/>
                 <Route exact path="/shop" 
-                component={()=><Shop inventory={inventory} 
-                setCart={setCart} 
-                cart={cart} 
-                setTotal={setTotal} 
-                total={total}/>}
-                />
+                component={()=><Shop cart={cart} inventory={inventory} onAdd={addItemToCart} onRemove={removeItemFromCart}/>}/>                 
             </Switch>
         </BrowserRouter>
     )
