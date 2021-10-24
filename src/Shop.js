@@ -1,6 +1,7 @@
 import Header from "./Header";
 import Footer from "./Footer";
 import Card from "./Card";
+import Cart from "./Cart";
 
 const Shop = ({inventory,cart, onAdd, onRemove}) => {
   let isButton = true;
@@ -17,7 +18,8 @@ const Shop = ({inventory,cart, onAdd, onRemove}) => {
   // }
   return (
     <div>
-      <Header cart={cart} onAdd={onAdd} onRemove={onRemove}/>
+      <Cart cart={cart} onAdd={onAdd} onRemove={onRemove}/>
+      <Header/>
       <h2>Inventory</h2>
        {
          inventory.map((item)=>{
