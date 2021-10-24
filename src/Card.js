@@ -1,6 +1,6 @@
-const Card = ({ img, name, price, isButton, onAdd, item }) => {
+const Card = ({ img, name, price, isButton, onAdd, item, cl}) => {
   return (
-    <div>
+    <div className={cl?cl:""}>
       <img src={img} alt={name} />
       <h3>{name}</h3>
       {

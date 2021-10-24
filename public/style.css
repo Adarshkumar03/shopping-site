@@ -5,7 +5,14 @@
 
 :root{
   --cart-bg:#ef5350;
-  --cart-text:white
+  --cart-text-color:white;
+  --font-head: 'Montserrat', sans-serif;
+   --font-sub: 'Roboto', sans-serif;
+}
+
+body{
+    box-sizing: border-box;
+    font-family: var(--font-sub);
 }
 
 .cart{
@@ -14,7 +21,7 @@
     left: 0;
     width: 100%;
     background-color: var(--cart-bg);
-    color:var(--cart-text);
+    color:var(--cart-text-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,7 +31,7 @@
 
 .cart button{
    background-color: var(--cart-bg);
-   color:var(--cart-text);
+   color:var(--cart-text-color);
    border:none;
    cursor: pointer;
    position: relative;
@@ -45,6 +52,7 @@ header{
 header h1{
     font-size: 45px;
     margin-left:30px;
+    font-family: var(--font-head);
 }
 
 nav{
@@ -58,6 +66,11 @@ ul{
     justify-content: center;
     align-items: center;
     margin-right:30px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
 }
 
 li a{
@@ -74,4 +87,57 @@ li a:hover{
 section{
     border-bottom: 1px solid black;
     padding: 10px;
+}
+
+.main-header{
+    height: 500px;
+    width: 100vw;
+    padding:0;
+}
+
+.main-header img{
+    object-fit: cover;
+    width:100%;
+    height:500px;
+    filter: brightness(70%);
+    z-index: -10;
+}
+
+.main-content{
+    position: absolute;
+    top: 300px;
+    left:650px;
+    color: white;
+}
+
+.main-content h1{
+    font-size: 55px;
+    margin-bottom: 10px;
+    font-family: var(--font-head);
+}
+
+.main-content button{
+    padding:10px;
+    background-color: white;
+    border:1px solid white;
+    font-size:15px;
+    font-weight: bold;
+}
+
+.features{
+    display:grid;
+}
+
+.feature-1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.feature-2{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
 }

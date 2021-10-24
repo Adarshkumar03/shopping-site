@@ -7,7 +7,7 @@ import Main from "./Main";
 
 function App({cart, onAdd, onRemove}) {
   return (
-    <div className="App">
+    <div>
       <Cart cart={cart} onAdd={onAdd} onRemove={onRemove}/>
       <Header/>
       <main>
