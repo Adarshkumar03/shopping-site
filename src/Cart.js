@@ -9,7 +9,7 @@ const Cart = ({cart, onAdd, onRemove}) => {
         return sum+item.number;
     }, 0);
     return (<section className="cart">
-        <button onClick={()=>{setIsOpen(true)}}>Total: ${total} ({noOfItems}) items </button>
+        <button onClick={()=>{setIsOpen(true)}}>Total: ${total} ({noOfItems} items) </button>
         {   
             isOpen?(cart.length?(cart.map((item)=>{
                 return (<div>

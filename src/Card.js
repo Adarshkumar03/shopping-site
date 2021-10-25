@@ -1,8 +1,12 @@
+import {Link} from "react-router-dom";
+
 const Card = ({ img, name, price, isButton, onAdd, item, cl}) => {
   return (
     <div className={cl?cl:""}>
       <img src={img} alt={name} />
-      <h3>{name}</h3>
+      {
+        isButton?<h3>{name}</h3>:<button><Link to="/shop">{name}</Link></button>
+      }
       {
         price&&<p>${price}</p>
       }
