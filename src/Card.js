@@ -1,4 +1,7 @@
 import {Link} from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
+
 
 const Card = ({ img, name, price, isButton, onAdd, item, cl}) => {
   return (
@@ -11,7 +14,7 @@ const Card = ({ img, name, price, isButton, onAdd, item, cl}) => {
         price&&<p>${price}</p>
       }
       {
-        isButton&&<button onClick={()=>{onAdd(item)}}>Add to Cart</button>
+        isButton&&<button onClick={()=>{onAdd(item)}}>Add to Cart <FontAwesomeIcon icon={faPlus}/></button>
       }
     </div>
   );

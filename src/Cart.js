@@ -1,4 +1,6 @@
 import {useState} from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
 
 const Cart = ({cart, onAdd, onRemove}) => {
     let total = cart.reduce((sum, item)=>{
@@ -12,12 +14,15 @@ const Cart = ({cart, onAdd, onRemove}) => {
         <button onClick={()=>{setIsOpen(true)}}>Total: ${total} ({noOfItems} items) </button>
         {   
             isOpen?(cart.length?(cart.map((item)=>{
-                return (<div>
+                return (<div className="cart-item">
+                  <img src={item.imgUrl} alt={item.name}/>
                   <h3>{item.name}</h3>
                   <h4>${item.price}</h4>
                   <h4>Number:{item.number}</h4>
-                  <button onClick={()=>{onAdd(item)}}>Add</button>    
-                  <button onClick={()=>{onRemove(item)}}>Remove</button>    
+                  <div className="cart-btn">
+                    <button onClick={()=>{onAdd(item)}}><FontAwesomeIcon icon={faPlus}/></button>    
+                    <button onClick={()=>{onRemove(item)}}><FontAwesomeIcon icon={faMinus}/></button>
+                  </div>    
                 </div>);
             })):(<h3>Your cart is empty</h3>)):null
         }

@@ -6,57 +6,57 @@ import Shop from "./Shop";
 const Routes = () => {
     const inventory = [{
         id:1,
-        name:"Shoes",
+        name:"Mens Ankle Length Jeans",
         price:10,
-        imgUrl:"",
+        imgUrl:"https://5.imimg.com/data5/AL/RS/MY-2325220/men-ankle-length-jeans-500x500.jpg",
         number:1
       },{
         id:2,
-        name:"Shoes",
+        name:"Double Breasted Overcoat",
         price:10,
-        imgUrl:"",
+        imgUrl:"https://img.joomcdn.net/e7f05c74e2499bc10cfdc8d32555feb760e578c7_original.jpeg",
         number:1
       },{
         id:3,
-        name:"Shoes",
+        name:"Cardigan For Women",
         price:10,
-        imgUrl:"",
+        imgUrl:"https://looksgud.com/blog/wp-content/uploads/2019/07/roadster-cardigan.jpg",
         number:1
       },{
         id:4,
-        name:"Shoes",
+        name:"T-Shirt For Men",
         price:10,
-        imgUrl:"",
+        imgUrl:"https://4.imimg.com/data4/AA/HC/MY-26596027/men-s-fancy-t-shirt-500x500.jpg",
         number:1
       },{
         id:5,
-        name:"Shoes",
+        name:"Green Shirt For Men",
         price:10,
-        imgUrl:"",
+        imgUrl:"https://assets.ajio.com/medias/sys_master/root/20210420/R70k/607ecc5baeb269a9e3972075/dennislingo_premium_attire_green_full_sleeves_slim_fit_shirt.jpg",
         number:1
       },{
         id:6,
-        name:"Shoes",
+        name:"Hoodies for Men",
         price:10,
-        imgUrl:"",
+        imgUrl:"https://4.imimg.com/data4/RQ/WI/MY-2366923/hoddies-500x500.jpg",
         number:1
       },{
         id:7,
-        name:"Shoes",
+        name:"Navy Blue Short Kurta",
         price:10,
-        imgUrl:"",
+        imgUrl:"https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-824,/pub/media/catalog/product/j/0/j0074v.jpg?rnd=20200526195200",
         number:1
       },{
         id:8,
-        name:"Shoes",
+        name:"Olive Green Long Kurta",
         price:10,
-        imgUrl:"",
+        imgUrl:"https://tjori.gumlet.com/prod-images/TJ-MW-10-06_1.jpg",
         number:1
       },{
         id:9,
-        name:"Shoes",
+        name:"Military Cargo Pants",
         price:10,
-        imgUrl:"",
+        imgUrl:"https://5.imimg.com/data5/GA/IN/MY-2073259/direct-men-27s-military-cargo-pants-cotton-straight-fit-casual-tatical-trousers-plus-size-6-pockets-500x500.jpeg",
         number:1
       }];
       const [cart, setCart] = useState([]);

@@ -5,27 +5,30 @@ import Cart from "./Cart";
 
 const Shop = ({inventory,cart, onAdd, onRemove}) => {
   let isButton = true;
-  // const addItemToCart = (item) => {
-  //      let index = cart.findIndex(cartItem=>cartItem.id===item.id);
-  //      if(index>-1){
-  //      let newCart = cart.slice();
-  //      newCart[index].number++;
-  //      setCart([...newCart]);
-  //      }
-  //      else{
-  //        setCart([...cart, item]);
-  //      }
-  // }
   return (
     <div>
       <Cart cart={cart} onAdd={onAdd} onRemove={onRemove}/>
       <Header/>
-      <h2>Inventory</h2>
+      <div className="shop-heading">
+        <img src="https://res.cloudinary.com/twenty20/private_images/t_standard-fit/v1615485908/photosp/ffabd711-a0e1-4769-a492-65f1c57b76d5/ffabd711-a0e1-4769-a492-65f1c57b76d5.jpg" alt=""/>
+        <h1>SHOP</h1>
+      </div>
+       <div className="shop-items"> 
        {
          inventory.map((item)=>{
-             return <Card key={item.id} name={item.name} price={item.price} isButton={isButton} onAdd={onAdd} item={item}/>
+             return <Card 
+             key={item.id} 
+             name={item.name} 
+             price={item.price} 
+             isButton={isButton} 
+             onAdd={onAdd} 
+             item={item}
+             cl="shop-item"
+             img={item.imgUrl}  
+             />
          })
        }
+       </div>
       <Footer />
     </div>
   );
